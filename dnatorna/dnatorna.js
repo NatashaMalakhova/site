@@ -4,10 +4,8 @@ const newItemTitle = newItemForm.querySelector('.add-form-input');
 const dnaToRna = (dna) => {
   let rna = '';
     
-  if (typeof dna !== 'string' ) throw new Error ('Ошибка типа данных');
-  if (dna === '' ) throw new Error ('Ошибка. Пустая строка');
-
-  dna = dna.toUpperCase().replace(/[/.,!?@;_’%:\s/\-/\–/\—/]*/g, '');
+  if (typeof dna !== 'string' ) return new Error ('Date is not "String"');
+  if (dna === '' ) throw new Error ('No date.');
 
   for (let i = 0; i < dna.length; i++) {
     if (dna[i] === 'G') {
@@ -19,7 +17,7 @@ const dnaToRna = (dna) => {
     } else if (dna[i] === 'A') {
       rna += 'U';
     } else {
-      throw new Error ('Ошибка ввода строки, неправильные данные или лишние символы');
+      return 'Данные введены неправильно. Используйте только "G", "C", "T", "A" в любом регистре.';
     }
   }
   return rna;
@@ -27,10 +25,13 @@ const dnaToRna = (dna) => {
 
 newItemForm.addEventListener('submit', (evt) => {
   evt.preventDefault();
-  const taskText = newItemTitle.value;
-  dnaToRna(taskText);
-  console.log(taskText);
-  document.getElementById('dna').innerHTML = taskText.toUpperCase().replace(/[/.,!?@;_’%:\s/\-/\–/\—/]*/g, '');
-
-  document.getElementById('rna').innerHTML = dnaToRna(taskText);
+  const taskText = newItemTitle.value.toUpperCase().replace(/[/.,!?@;_’%^&*:\s/\-/\–/\—/]*/g, '');
+  
+  if (taskText !== '') {
+    dnaToRna(taskText);
+    document.getElementById('dna').innerHTML = taskText;
+    document.getElementById('rna').innerHTML = dnaToRna(taskText);
+  } else {
+    document.getElementById('rna').innerHTML = 'Вы ввели пустую строку';
+  }
 });

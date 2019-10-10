@@ -3,31 +3,41 @@ const addStr = newItemForm.querySelector('#str');
 const addStartIndex = newItemForm.querySelector('#start-index');
 const addSubstrLength = newItemForm.querySelector('#str-length');
 
-
 const substr = (str, startIndex, substrLength) => {
   if (str === undefined) throw new Error ('The string is not defined.');
+
   str = String(str);
+
   if (startIndex === undefined ) startIndex = 0;
   if (substrLength === undefined) substrLength = str.length;
 
+  if (startIndex >= str.length || substrLength === 0) return '';
+
   let newStartIndex = (startIndex < 0) ? 0 : startIndex;
-  let newSubstrLength = (substrLength < 0) ? 1 : 
-    ((startIndex + substrLength - 1) < str.length) ? substrLength :
-    str.length;
+  let newLastIndex = (substrLength < 0) ? newStartIndex : (newStartIndex + (substrLength - 1));
+    
+  if (substrLength >= str.length) {
+    newLastIndex = (str.length - 1);
+  }
+  
+  let result = '';
 
-  if (startIndex > str.length || newSubstrLength === 0) return '';
-
-  return str.split('').slice(newStartIndex, newStartIndex + newSubstrLength).join('');
+  for (let i = newStartIndex; i <= newLastIndex; i+=1) {
+    result += str[i];
+  }
+  return result;
 };
 
 newItemForm.addEventListener('submit', (evt) => {
   evt.preventDefault();
-  const strText = addStr.value;
-  const indexText = addStartIndex.value;
-  const lengthText = addSubstrLength.value;
-  const result = substr(strText, indexText, lengthText);
+  let strText = addStr.value;
+  let indexText = addStartIndex.value; 
+  let lengthText = addSubstrLength.value;
 
-  substr(strText, indexText, lengthText);
+  indexText = Number(indexText);
+  lengthText = Number(lengthText);
+
+  const end = substr(strText, indexText - 1, lengthText);
   
-  document.getElementById('answer').innerHTML = result;
+  document.getElementById('answer').innerHTML = end;
 });

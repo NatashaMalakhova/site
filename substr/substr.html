@@ -17,7 +17,7 @@
       </nav>
     <div class="pal">
       <h1>Верните подстроку из строки</h1>
-      <p>Метод substr возвращает подстроку из переданной строки. Подстрокой называется любая выбранная часть строки. Например для строки hello можно выделить следующие подстроки: ello, llo, o, el и множество других. </p>
+      <p>Подстрокой называется любая выбранная часть строки. ,<br>Например для строки hello можно выделить следующие подстроки: ello, llo, o, el и множество других.</p>
       <form class="add-form" method="post" onsubmit="return false">
         <div class="main">
             <div class="field">
@@ -26,11 +26,11 @@
             </div>
             <div class="field">
               <label for="start-index">Начальный индекс</label>
-              <input class="add-form-input" type="text" id="start-index" aria-label="task description" placeholder="Только цифра">
+              <input class="add-form-input" type="text" id="start-index" aria-label="task description" placeholder="Только цифра" required>
             </div>
             <div class="field">
               <label for="str-length">Длина подстроки</label>
-              <input class="add-form-input" type="text" id="str-length" aria-label="task description" placeholder="Только цифра">
+              <input class="add-form-input" type="text" id="str-length" aria-label="task description" placeholder="Только цифра" required>
             </div>
         </div>
         <button class="add-form-button" id="button" type="submit">Проверить</button>
