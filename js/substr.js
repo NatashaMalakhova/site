@@ -6,10 +6,13 @@ const addSubstrLength = newItemForm.querySelector('#str-length');
 const substr = (str, startIndex, substrLength) => {
   if (str === undefined) throw new Error ('The string is not defined.');
 
-  str = String(str);
+  // str = String(str);
 
-  if (startIndex === undefined ) startIndex = 0;
-  if (substrLength === undefined) substrLength = str.length;
+  if (startIndex === '' ) startIndex = 0;
+  if (substrLength === '') substrLength = str.length;
+
+  startIndex = Number(startIndex);
+  substrLength = Number(substrLength);
 
   if (startIndex >= str.length || substrLength === 0) return '';
 
@@ -34,10 +37,9 @@ newItemForm.addEventListener('submit', (evt) => {
   let indexText = addStartIndex.value; 
   let lengthText = addSubstrLength.value;
 
-  indexText = Number(indexText);
-  lengthText = Number(lengthText);
-
-  const end = substr(strText, indexText - 1, lengthText);
+  console.log(lengthText);
+  console.log(indexText);
+  const end = substr(strText, indexText, lengthText);
   
-  document.getElementById('answer').innerHTML = end;
+  document.getElementById('answer').innerHTML = 'Подстрока: ' + end;
 });
