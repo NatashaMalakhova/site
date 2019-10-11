@@ -5,8 +5,7 @@ const buttonClick = document.querySelector('.add-form-button');
 const isPalindrome = (str) => {
   if (str == '') return 'No date';
   if (str === undefined) return 'No date';
-    
-  str = String(str).toLowerCase().replace(/[/.,!?@;_’'"`%:\s/\-/\–/\—/]*/g, '');
+  
   if (str.length === 0) throw new Error ('No data.');
   if (str.length === 1) return true;
 
@@ -23,15 +22,14 @@ const isPalindrome = (str) => {
 
 newItemForm.addEventListener('submit', (evt) => {
   evt.preventDefault();
-  const taskText = newItemTitle.value;
+  const taskText = newItemTitle.value.toLowerCase().replace(/[/.,!?@;_’'"`%:\s/\-/\–/\—/]*/g, '');
 
-    // if (isPalindrome(taskText) === 'No date') {
-    //   document.getElementById('answer').innerHTML = 'Вы ввели пустую строку.';
-    // } else {
+    if (taskText === '') {
+      document.getElementById('answer').innerHTML = 'Вы ввели пустую строку.';
+    } else {
       const output = (isPalindrome(taskText) === true) ? 
       (document.getElementById('answer').innerHTML = 'Да, это палиндром.') : 
       (document.getElementById('answer').innerHTML = 'Нет, это не палиндром.');
-    
-    
-  
+    }
+
 });
