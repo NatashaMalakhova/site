@@ -8,7 +8,7 @@ body {
 /* начало меню */
 .top-menu {
   position: relative;
-  background: rgb(97, 97, 97);
+  background: rgb(90, 137, 165);
 }
 
 .menu-main {
@@ -46,11 +46,11 @@ body {
 }
 
 .here {
-  background-color: #433851;
+  background-color: #2f5a7a;
 }
 
 .menu-main a:hover {
-  background: #433851;
+  background: #2f5a7a;
 }
 
 /* закончилось меню */
@@ -86,7 +86,7 @@ body {
   padding-top: 0.9em;
   font: inherit;
 
-  border: 1px solid #82c799;
+  border: 1px solid #bfc4c1;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -106,12 +106,12 @@ body {
 }
 
 .add-form-input:focus {
-  border: 1px solid #5353b2;
+  border: 1px solid #2f5a7a;
   outline: none;
 }
 
 .add-form-input:hover {
-  box-shadow: 0 0 6px rgba(91, 83, 178, 0.6);
+  box-shadow: 0 0 6px rgba(47, 89, 122, 0.6);
 }
 
 .add-form-input::placeholder {
@@ -125,7 +125,7 @@ body {
   font: inherit;
   color: #ffffff;
 
-  background-color: #7b7b7b;
+  background-color: #5581a0;
   border: none;
   border-radius: 4px;
 
@@ -135,12 +135,12 @@ body {
 
 .add-form-button:hover,
 .add-form-button:focus {
-  background-color: #5f5f91;
+  background-color: #3d729a;
   outline: none;
 }
 
 .add-form-button:active {
-  background-color: #433851;
+  background-color: #2f5a7a;
 }
 
 .comig-sone {
