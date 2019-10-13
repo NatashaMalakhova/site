@@ -26,7 +26,7 @@ const dnaToRna = (dna) => {
 
 newItemForm.addEventListener('submit', (evt) => {
   evt.preventDefault();
-  const taskText = newItemTitle.value.toUpperCase().replace(/[/.,!?@;_’%^&*:\s/\-/\–/\—/]*/g, '');
+  const taskText = newItemTitle.value.toUpperCase().replace(/[^A-Za-zа-яА-Я0-9]*/g, '');
 
   if (taskText === '') {
     document.getElementById('answer-dna').innerHTML = 'Вы ввели пустую строку.';
@@ -66,7 +66,7 @@ const rnaToDna = (rna) => {
 
 newItemFormRna.addEventListener('submit', (evt) => {
   evt.preventDefault();
-  const taskText = newItemRna.value.toUpperCase().replace(/[/.,!?@;_’%^&*:\s/\-/\–/\—/]*/g, '');
+  const taskText = newItemRna.value.toUpperCase().replace(/[^a-zA-Z0-9а-яА-Я]*/g, '');
 
   if (taskText === '') {
     document.getElementById('answer-rna').innerHTML = 'Вы ввели пустую строку.';

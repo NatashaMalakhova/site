@@ -22,7 +22,7 @@ const isPalindrome = (str) => {
 
 newItemForm.addEventListener('submit', (evt) => {
   evt.preventDefault();
-  const taskText = newItemTitle.value.toLowerCase().replace(/[/.,!?@;_’'"`%:\s/\-/\–/\—/]*/g, '');
+  const taskText = newItemTitle.value.toLowerCase().replace(/[^A-Za-zа-яА-Я0-9]*/g, '');
 
   if (taskText === '') {
     document.getElementById('answer').innerHTML = 'Вы ввели пустую строку.';
