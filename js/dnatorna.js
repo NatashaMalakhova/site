@@ -29,7 +29,7 @@ newItemForm.addEventListener('submit', (evt) => {
   const taskText = newItemTitle.value.toUpperCase().replace(/[^A-Za-zа-яА-Я0-9]*/g, '');
 
   if (taskText === '') {
-    document.getElementById('answer-dna').innerHTML = 'Вы ввели пустую строку.';
+    document.getElementById('answer-dna').innerHTML = 'Нет данных для конвертации.';
   }
   if (dnaToRna(taskText) === 'Вы ввели неправильные данные, попробуйте ещё раз.') {
     document.getElementById('answer-dna').innerHTML = dnaToRna(taskText);
@@ -69,7 +69,7 @@ newItemFormRna.addEventListener('submit', (evt) => {
   const taskText = newItemRna.value.toUpperCase().replace(/[^a-zA-Z0-9а-яА-Я]*/g, '');
 
   if (taskText === '') {
-    document.getElementById('answer-rna').innerHTML = 'Вы ввели пустую строку.';
+    document.getElementById('answer-rna').innerHTML = 'Нет данных для конвертации.';
   }
   if (rnaToDna(taskText) === 'Вы ввели неправильные данные, попробуйте ещё раз.') {
     document.getElementById('answer-rna').innerHTML = rnaToDna(taskText);
