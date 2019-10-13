@@ -12,14 +12,13 @@ const substr = (str, startIndex, substrLength) => {
   startIndex = Number(startIndex);
   substrLength = Number(substrLength);
 
-  if (startIndex >= str.length || substrLength === 0) return '';
+  if (startIndex >= str.length || substrLength === 0) return 'Нет подстроки';
 
   let newStartIndex = (startIndex < 0) ? 0 : startIndex;
-  let newLastIndex = (substrLength < 0) ? newStartIndex : (newStartIndex + (substrLength - 1));
-
-  if (substrLength >= str.length) {
-    newLastIndex = (str.length - 1);
-  }
+  let newLastIndex = (substrLength >= str.length) ? (str.length - 1) :
+    (substrLength < 0) ? newStartIndex :
+    ((str.length - startIndex) < substrLength) ? (str.length - 1) :
+    (newStartIndex + (substrLength - 1));
 
   let result = '';
 
@@ -35,9 +34,11 @@ newItemForm.addEventListener('submit', (evt) => {
   let indexText = addStartIndex.value;
   let lengthText = addSubstrLength.value;
 
-  console.log(lengthText);
-  console.log(indexText);
   const end = substr(strText, indexText, lengthText);
 
-  document.getElementById('answer').innerHTML = 'Подстрока: ' + end;
+  if (end === 'Нет подстроки') {
+    document.getElementById('answer').innerHTML = 'Нет подстроки';
+  } else {
+    document.getElementById('answer').innerHTML = 'Подстрока: ' + end;
+  }
 });
