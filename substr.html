@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <title>Substr</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/substr.css">
-    <link rel="stylesheet" href="./css/style.css">
-    
-  </head>
-  <body>
-    <nav class="top-menu">
-        <ul class="menu-main">
-          <li class="left-item"><a href="dnatorna.html">ДНК в РНК</a></li>
-          <li class="left-item"><a href="palindrom.html">Проверка на палиндром</a></li>
-          <li class="left-item here"><a href="substr.html">Подстрока</a></li>
-          <li class="left-item"><a href="#">To-do List</a></li>
-      </ul>
-      </nav>
-    
-    <form class="add-form" method="post" onsubmit="return false">
-      <div class="main">
-          <div class="field">
-            <label for="str">Строка</label>
-            <input class="add-form-input" type="text" id="str" aria-label="task description" placeholder="Введите строку" required>
-          </div>
-          <div class="field">
-            <label for="start-index">Начальный индекс</label>
-            <input class="add-form-input" type="text" id="start-index" aria-label="task description" placeholder="Только цифра" >
-          </div>
-          <div class="field">
-            <label for="str-length">Длина подстроки</label>
-            <input class="add-form-input" type="text" id="str-length" aria-label="task description" placeholder="Только цифра" >
-          </div>
-        </div>
-        <button class="add-form-button" id="button" type="submit">Проверить</button>
-        
-    </form>
-    <div><span id="answer"></span> </div>
-    <script src="./js/substr.js"></script>
-  </body>
+
+<head>
+  <title>Substr</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/substr.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <nav class="top-menu">
+    <ul class="menu-main">
+      <li class="left-item"><a href="dnatorna.html">ДНК в РНК</a></li>
+      <li class="left-item"><a href="palindrom.html">Проверка на палиндром</a></li>
+      <li class="left-item here"><a href="substr.html">Подстрока</a></li>
+      <li class="left-item"><a href="to_do_list.html">To-do List</a></li>
+      <li class="right-item"><a href="https://github.com/NatashaMalakhova" target="_blank">Малахова Наталья</a></li>
+    </ul>
+  </nav>
+  <form class="add-form" method="post" onsubmit="return false">
+    <div class="main">
+      <div class="field">
+        <label for="str">Строка</label>
+        <input class="add-form-input" type="text" id="str" aria-label="task description" placeholder="Введите строку"
+          required>
+      </div>
+      <div class="field">
+        <label for="start-index">Начальный индекс</label>
+        <input class="add-form-input" type="text" id="start-index" aria-label="task description"
+          placeholder="Только цифра">
+      </div>
+      <div class="field">
+        <label for="str-length">Длина подстроки</label>
+        <input class="add-form-input" type="text" id="str-length" aria-label="task description"
+          placeholder="Только цифра">
+      </div>
+    </div>
+    <button class="add-form-button" id="button" type="submit">Проверить</button>
+  </form>
+  <div><span id="answer"></span> </div>
+  <script src="./js/substr.js"></script>
+</body>
+
 </html>

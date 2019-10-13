@@ -1,29 +1,37 @@
 body {
-  font-size: 18px;
+  font-size: 16px;
   line-height: normal;
   padding: 0;
   margin: 0;
 }
 
-
 /* начало меню */
 .top-menu {
   position: relative;
   background: rgb(97, 97, 97);
-  
 }
+
 .menu-main {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-left: 4.5em;
 }
+
 .menu-main:after {
   content: "";
   display: table;
   clear: both;
 }
-.left-item {float: left;}
+
+.left-item {
+  float: left;
+  margin-right: 0.1em;
+}
+
+.right-item {
+  float: right;
+  font-weight: normal;
+}
 
 .menu-main a {
   text-decoration: none;
@@ -34,45 +42,59 @@ body {
   letter-spacing: 1px;
   color: white;
   transition: .3s linear;
+
 }
 
 .here {
   background-color: #433851;
 }
 
-.menu-main a:hover {background: #433851;}
+.menu-main a:hover {
+  background: #433851;
+}
 
 /* закончилось меню */
+
+#answer-dna,
+#answer-rna,
 #answer,
 .add-form {
-  margin-top: 2.5em;
+  margin-top: 3em;
   display: flex;
   width: 60%;
   margin-left: 2em;
 }
 
-#answer {
-  margin-left: 2em;
+.rna-to-dna {
+  padding-top: 2em;
 }
-.hint{
+
+.hint {
   font-size: 0.8em;
   margin-left: 3.8em;
 }
-#answer {
 
+#answer,
+#answer-dna,
+#answer-rna {
   box-sizing: border-box;
   height: 46px;
   margin-right: 16px;
+  margin-top: 1em;
+  margin-bottom: 3em;
   padding-left: 1em;
-  padding-top: 0.6em;
+  padding-top: 0.9em;
   font: inherit;
 
-  border: 1px solid #305f3f;
-  border-radius: 4px;
+  border: 1px solid #82c799;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
+
 .add-form-input {
   flex-grow: 1;
-  
+
   box-sizing: border-box;
   height: 46px;
   margin-right: 16px;
@@ -99,24 +121,35 @@ body {
 .add-form-button {
   flex-shrink: 0;
   padding: 12px;
-  
+
   font: inherit;
   color: #ffffff;
-  
+
   background-color: #7b7b7b;
   border: none;
   border-radius: 4px;
-  
+
   user-select: none;
   touch-action: manipulation;
 }
-  
+
 .add-form-button:hover,
 .add-form-button:focus {
   background-color: #5f5f91;
   outline: none;
 }
-  
+
 .add-form-button:active {
   background-color: #433851;
+}
+
+.comig-sone {
+  margin-left: 3em;
+  margin-top: 3em;
+}
+
+.comig-sone h1 {
+  font-size: 1.5em !important;
+  font-weight: normal;
+  color: #7b7b7b;
 }

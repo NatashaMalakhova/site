@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <title>DNA_to_RNA</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/normalize.css">
-    
-  </head>
-  <body>
-    <nav class="top-menu">
-        <ul class="menu-main">
-          <li class="left-item here"><a href="dnatorna.html">ДНК в РНК</a></li>
-          <li class="left-item"><a href="palindrom.html">Проверка на палиндром</a></li>
-          <li class="left-item"><a href="substr.html">Подстрока</a></li>
-          <li class="left-item"><a href="#">To-do List</a></li>
-      </ul>
 
-      </nav>
+<head>
+  <title>DNA_to_RNA</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/normalize.css">
 
-    <form class="add-form" method="post" onsubmit="return false">
-      <input class="add-form-input" type="text"  id="dna-input" aria-label="task description" placeholder="Введите код, который хотите конвертировать." required>
-      <button class="add-form-button" type="submit">Конвертировать</button>
-    </form>
-    <p class="hint">Используйте только &quot;G&quot;, &quot;C&quot;, &quot;T&quot;, &quot;A&quot; в любом регистре.
-    </p>
-    <div>
-      
-      <p><span id="answer"></span> </p>
-    </div>
-    <script src="./js/dnatorna.js"></script>
-  </body>
+</head>
+
+<body>
+  <!-- Menu -->
+  <nav class="top-menu">
+    <ul class="menu-main">
+      <li class="left-item here"><a href="dnatorna.html">ДНК в РНК</a></li>
+      <li class="left-item"><a href="palindrom.html">Проверка на палиндром</a></li>
+      <li class="left-item"><a href="substr.html">Подстрока</a></li>
+      <li class="left-item"><a href="to_do_list.html">To-do List</a></li>
+      <li class="right-item"><a href="https://github.com/NatashaMalakhova" target="_blank">Малахова Наталья</a></li>
+    </ul>
+  </nav>
+  <!-- DNA to RNA -->
+  <form class="add-form dna-to-rna" method="post" onsubmit="return false">
+    <input class="add-form-input" type="text" id="dna-input" aria-label="task description"
+      placeholder="Введите цепь ДНК" required>
+    <button class="add-form-button" type="submit">Конвертировать</button>
+  </form>
+  <p class="hint">Используйте только &quot;G&quot;, &quot;C&quot;, &quot;T&quot;, &quot;A&quot; в любом регистре.
+  </p>
+  <div>
+    <p><span id="answer-dna"></span></p>
+  </div>
+  <!-- DNA to RNA exit -->
+
+  <!-- RNA to DNA -->
+  <form class="add-form rna-to-dna" method="post" onsubmit="return false">
+    <input class="add-form-input" type="text" id="rna-input" aria-label="task description"
+      placeholder="Введите цепь РНК" required>
+    <button class="add-form-button" type="submit">Конвертировать</button>
+  </form>
+  <p class="hint">Используйте только &quot;C&quot;, &quot;G&quot;, &quot;A&quot;, &quot;U&quot; в любом регистре.
+  </p>
+  <div>
+    <p><span id="answer-rna"></span></p>
+  </div>
+  <!-- RNA to DNA exit-->
+  <script src="./js/dnatorna.js"></script>
+</body>
+
 </html>

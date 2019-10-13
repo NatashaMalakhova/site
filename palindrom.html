@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <title>Palindrom</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
-    
-  </head>
-  <body>
-    <nav class="top-menu">
-        <ul class="menu-main">
-          <li class="left-item"><a href="dnatorna.html">ДНК в РНК</a></li>
-          <li class="left-item here"><a href="palindrom.html">Проверка на палиндром</a></li>
-          <li class="left-item"><a href="substr.html">Подстрока</a></li>
-          <li class="left-item"><a href="#">To-do List</a></li>
-      </ul>
-      </nav>
-    <form class="add-form" method="post" onsubmit="return false">
-      <input class="add-form-input" type="text"  aria-label="task description" placeholder="Введите данные, которые хотите проверить. Например: топот." required>
-      <button class="add-form-button" type="submit">Проверить</button>
-    </form>
-    <div>
-      <p><span id="answer"></span> </p>
-    </div>
-    <script src="./js/palindrom.js"></script>
-  </body>
+
+<head>
+  <title>Palindrom</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <nav class="top-menu">
+    <ul class="menu-main">
+      <li class="left-item"><a href="dnatorna.html">ДНК в РНК</a></li>
+      <li class="left-item here"><a href="palindrom.html">Проверка на палиндром</a></li>
+      <li class="left-item"><a href="substr.html">Подстрока</a></li>
+      <li class="left-item"><a href="to_do_list.html">To-do List</a></li>
+      <li class="right-item"><a href="https://github.com/NatashaMalakhova" target="_blank">Малахова Наталья</a></li>
+    </ul>
+  </nav>
+  <form class="add-form" method="post" onsubmit="return false">
+    <input class="add-form-input" type="text" aria-label="task description"
+      placeholder="Введите данные, которые хотите проверить. Например: топот." required>
+    <button class="add-form-button" type="submit">Проверить</button>
+  </form>
+  <div>
+    <p><span id="answer"></span> </p>
+  </div>
+  <script src="./js/palindrom.js"></script>
+</body>
+
 </html>

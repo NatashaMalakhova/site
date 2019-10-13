@@ -1,24 +1,26 @@
-
 .add-form {
   float: left;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .field {
-  clear: both; 
+  clear: both;
   text-align: right;
   line-height: 3em;
 }
+
 label {
   float: left;
   padding-right: 1em;
 }
+
 .main {
   float: right;
 }
 
-.add-form-input{
+.add-form-input {
   margin: 0.2em;
 }
 
