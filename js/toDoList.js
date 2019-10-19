@@ -36,7 +36,7 @@ const createNewElement = (task, status) => {
 
 const addTask = () => {
   if (inputTask.value) {
-    let listItem = createNewElement(inputTask.value, false);
+    const listItem = createNewElement(inputTask.value, false);
     unfinishedTasks.appendChild(listItem);
     binTaskEvent(listItem, finishTask);
     save();
