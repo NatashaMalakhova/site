@@ -26,7 +26,7 @@ const createNewElement = (task, status) => {
 
   const deleteButton = document.createElement('button');
   deleteButton.className = "material-icons delete";
-  deleteButton.innerHTML = "<i class='material-icons'>delete</i>";
+  deleteButton.innerHTML = "<i class='material-icons'>clear</i>";
 
   listItem.appendChild(checkbox);
   listItem.appendChild(label);
