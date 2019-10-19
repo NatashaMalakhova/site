@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>To-do list</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/normalize.css">
+
+  <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/toDoList.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <!-- menu -->
+  <nav class="top-menu">
+    <ul class="menu-main">
+      <li class="left-item"><a href="dnatorna.html">ДНК в РНК</a></li>
+      <li class="left-item"><a href="palindrom.html">Проверка на палиндром</a></li>
+      <li class="left-item"><a href="substr.html">Подстрока</a></li>
+      <li class="left-item here"><a href="toDoList.html">To-do List</a></li>
+      <li class="right-item"><a href="https://github.com/NatashaMalakhova" target="_blank">Малахова Наталья</a></li>
+    </ul>
+  </nav>
+  <!-- menu done -->
+  <!-- to_do list -->
+  <div id="root">
+    <div class="wrapper">
+      <form class="add-form" method="post" onsubmit="return false">
+      <input class="add-form-input" type="text" id="new-task" placeholder="Добавьте новую задачу" autofocus>
+      <button class="add-form-button" id="add">Добавить</button>
+      <ul id="unfinished-tasks" style="list-style: none"></ul>
+    </form>
+    </div>
+  </div>
+  
+  <script src="./js/toDoList.js"></script>
+</body>
+
+</html> 
